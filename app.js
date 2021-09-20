@@ -2,6 +2,7 @@ const initialPrice = document.querySelector("#initial-price");
 const stocksQuantity =document.querySelector("#stocks-quantity");
 const currentPrice = document.querySelector("#current-price");
 const checkBtn =  document.querySelector("#check-button");
+var quantity = Number(stocksQuantity.value);
 const message =   document.querySelector("#message-display");
 
 checkBtn.addEventListener("click", function clickHandler()
