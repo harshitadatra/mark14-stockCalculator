@@ -15,15 +15,15 @@ checkBtn.addEventListener("click", function clickHandler()
 });
 function calculateProfitLoss(initial,quantity,current)
 {
-    if(initial>current&&initial>=0 && current>=0)
+    if(initial>current&&initial>=0 && current>=0&&quantity>=0)
     {
         //loss logic
         var loss = initial-current;
         var lossPercentage = (loss/initial)*100;
-        showMessage(`hey the loss is ${loss} and the loss percentage is ${lossPercentage}`);
+        showMessage(`oops the loss is ${loss} and the loss percentage is ${lossPercentage}`);
 
     }
-    else if(current > initial&&initial>=0 && current>=0)
+    else if(current > initial&&initial>=0 && current>=0&&quantity>=0)
     {
        //profit logic
        var profit =current-initial;
@@ -32,7 +32,7 @@ function calculateProfitLoss(initial,quantity,current)
     }
     else{
         //display message 
-        if (initial <= 0 || quantity <= 0) {
+        if (initial < 0 || quantity < 0||current<0) {
             showMessage("Please do not enter negative values");
         }
             else
